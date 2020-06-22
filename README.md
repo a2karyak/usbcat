@@ -1,10 +1,10 @@
 # usbcat
 
-netcat for USB endpoints.
+Like, netcat for USB endpoints. stdin and stdout are redirected to the endpoints of the specified USB device.
 
 ## Prerequisites
 
-lib
+	apt install libusb-1.0-0-dev
 
 ## Compile
 
@@ -27,9 +27,8 @@ gcc -std=gnu11 -o usbcat usbcat.c -lusb-1.0
 	  -h, --help
 	      Show usage
 
+## Bugs
 
+Only Bulk endpoints are supported.
 
-
-
-
-
+Error handling is rudimentary.
